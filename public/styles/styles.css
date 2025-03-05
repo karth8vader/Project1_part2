@@ -1,17 +1,38 @@
+/* General Styling */
 body {
     font-family: Arial, sans-serif;
     background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
 }
 
+/* Container Styling */
 .container {
-    max-width: 900px;
+    max-width: 1100px;
     margin: auto;
+    padding: 50px 20px;
+    text-align: center;
 }
 
+/* Section Title Styling */
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Subtext Styling */
+.container p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 50px; /* Increased space below heading */
+}
+
+/* Team Member Card Styling */
 .team-member {
     position: relative;
     text-align: center;
-    padding: 15px;
+    padding: 20px;
     background: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -22,45 +43,65 @@ body {
     align-items: center;
 }
 
+/* Hover Effect - Scaling and Background Change */
 .team-member:hover {
     transform: scale(1.05);
     background-color: #e0f7fa; /* Light cyan on hover */
 }
 
+/* Keep images as they were */
 .team-member img {
     width: 100%;
-    border-radius: 10px;
     max-width: 250px;
+    border-radius: 10px; /* Keeping it square/rounded as per original */
 }
 
-/* Keep name & designation on the same line */
-.name-container {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    align-items: center;
-    margin-top: 10px;
+/* Name Styling */
+.name {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #222;
 }
 
-/* Hide designation initially */
+/* Designation Styling */
 .designation {
-    font-size: 18px;
-    color: #555;
-    display: none;
+    font-size: 1rem;
+    color: #666;
+    display: none; /* Initially hidden */
 }
 
-/* Show designation on hover for desktop */
+/* Show designation on hover */
 @media (min-width: 768px) {
     .team-member:hover .designation {
-        display: inline;  /* Ensures it appears next to the name */
+        display: block;
     }
 }
 
-/* Fix grid layout for mobile */
+/* Adjust spacing between grid items */
 .row {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 50px; /* Increased space between cards */
 }
 
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 30px 15px;
+    }
+
+    .team-member {
+        padding: 15px;
+        max-width: 300px;
+    }
+
+    .row {
+        gap: 30px; /* Adjust spacing for smaller screens */
+    }
+
+    .container p {
+        margin-bottom: 30px; /* Less spacing on smaller screens */
+    }
+}
