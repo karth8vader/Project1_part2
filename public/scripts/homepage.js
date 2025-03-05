@@ -6,43 +6,38 @@ document.addEventListener("DOMContentLoaded", function () {
 		.then(response => response.text())
 		.then(data => {
 			document.getElementById('navbar-container').innerHTML = data;
-
-			let username = localStorage.getItem("username"); // Retrieve stored username
-			let navbarUsername = document.getElementById("navbar-username");
-			let logoutBtn = document.getElementById("logout-btn");
-			let loginBtn = document.getElementById("login-btn");
-
-			if (username) {
-				navbarUsername.textContent = `Hello, ${username}`;
-				navbarUsername.style.display = "inline";
-				loginBtn.style.display = "none";  // Hide login button
-				logoutBtn.style.display = "inline";  // Show logout button
-
-				logoutBtn.addEventListener("click", function (event) {
-					event.preventDefault();
-					localStorage.removeItem("username");
-					window.location.href = "homepage.html"; // Redirect to homepage after logout
-				});
-			} else {
-				navbarUsername.style.display = "none";
-				logoutBtn.style.display = "none";
-				loginBtn.style.display = "inline";
-			}
+			updateNavbar(); // Ensure navbar updates properly after loading
 		});
 
-	// Slideshow Auto Navigation
-	let slideIndex = 0;
-	let slides = document.getElementsByClassName("carousel-item");
+	function updateNavbar() {
+		let username = localStorage.getItem("username");
+		let navbarUsername = document.getElementById("navbar-username");
+		let logoutBtn = document.getElementById("logout-btn");
+		let loginBtn = document.getElementById("login-btn");
 
-	function showSlides() {
-		for (let i = 0; i < slides.length; i++) {
-			slides[i].classList.remove("active");
+		if (username) {
+			navbarUsername.textContent = `Hello, ${username}`;
+			navbarUsername.style.display = "inline";
+			navbarUsername.style.fontWeight = "bold";
+			navbarUsername.style.fontFamily = "'Roboto', sans-serif";
+			loginBtn.style.display = "none";
+			logoutBtn.style.display = "inline";
+
+			logoutBtn.addEventListener("click", function (event) {
+				event.preventDefault();
+				localStorage.removeItem("username");
+				window.location.href = "homepage.html";
+			});
+		} else {
+			navbarUsername.style.display = "none";
+			logoutBtn.style.display = "none";
+			loginBtn.style.display = "inline";
 		}
-		slideIndex = (slideIndex + 1) % slides.length;
-		slides[slideIndex].classList.add("active");
 	}
 
-	setInterval(showSlides, 5000); // Change image every 5 seconds
+	// Fix carousel auto-play
+	let carousel = document.getElementById("carouselExample");
+	let carouselInstance = new bootstrap.Carousel(carousel, { interval: 5000 });
 
 	// Back to top button functionality
 	let backToTopBtn = document.getElementById("backToTop");
