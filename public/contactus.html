@@ -13,45 +13,48 @@
 
 <!-- Navbar -->
 <div id="navbar-container"></div>
-<div class="row" style="padding: 10px;">
-  <div class="container" style="width: 100%">
-    <div class="form-container">
-      <h1>Contact Us</h1>
-      <form id="contact-form">
-        <label for="name">Full Name</label>
-        <input
-                type="text"
-                id="name"
-                name="name"
-                required
-                pattern="[A-Za-z\s]+"
-                title="Name should only contain letters and spaces.">
+<div class="container-fluid" style="padding: 10px;">
+  <div class="row" style="padding: 10px;" >
+    <div class="col-md-8">
+      <div class="form-container">
+        <h1>Contact Us</h1>
+        <form id="contact-form">
+          <label for="name">Full Name</label>
+          <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  pattern="[A-Za-z\s]+"
+                  title="Name should only contain letters and spaces.">
 
-        <label for="email">Email Address</label>
-        <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                title="Please enter a valid email address.">
+          <label for="email">Email Address</label>
+          <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  title="Please enter a valid email address.">
 
-        <label for="subject">Subject</label>
-        <input type="text" id="subject" name="subject" required>
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" required>
 
-        <label for="message">Your Message</label>
-        <textarea id="message" name="message" required></textarea>
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" required></textarea>
 
-        <button type="submit">Send Message</button>
-      </form>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
     </div>
-
-    <!-- Contact Information Column -->
-    <div class="contact-info">
-      <h2>Contact Information</h2>
-      <p><strong>Address:</strong> 123 Main Street, Suite 100, Cityville, ST 12345</p>
-      <p><strong>Phone:</strong> (123) 456-7890</p>
-      <p><strong>Email:</strong> contact@trafitrak.com</p>
-      <img src="images/office.webp" alt="Office Building">
+    <div class="col-md-4">
+      <!-- Contact Information Column -->
+      <div class="contact-info">
+        <h2>Contact Information</h2>
+        <p><strong>Address:</strong> 123 Main Street, Suite 100, Cityville, ST 12345</p>
+        <p><strong>Phone:</strong> (123) 456-7890</p>
+        <p><strong>Email:</strong> contact@traffitrack.com</p>
+        <img src="images/office.webp" alt="Office Building">
+      </div>
     </div>
   </div>
 </div>
