@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TraffiTrack - Home</title>
+  <link rel="stylesheet" href="homepage.css">
+  <link rel="stylesheet" href="styles/contactus.css">
+  <script defer src="homepage.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<div id="navbar-container"></div>
+<div class="row" style="padding: 10px;">
+  <div class="container" style="width: 100%">
+    <div class="form-container">
+      <h1>Contact Us</h1>
+      <form id="contact-form">
+        <label for="name">Full Name</label>
+        <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                pattern="[A-Za-z\s]+"
+                title="Name should only contain letters and spaces.">
+
+        <label for="email">Email Address</label>
+        <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                title="Please enter a valid email address.">
+
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" required>
+
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <!-- Contact Information Column -->
+    <div class="contact-info">
+      <h2>Contact Information</h2>
+      <p><strong>Address:</strong> 123 Main Street, Suite 100, Cityville, ST 12345</p>
+      <p><strong>Phone:</strong> (123) 456-7890</p>
+      <p><strong>Email:</strong> contact@trafitrak.com</p>
+      <img src="images/office.webp" alt="Office Building">
+    </div>
+  </div>
+</div>
+
+<script>
+    // Load navbar
+    fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('navbar-container').innerHTML = data);
+</script>
+<script src="scripts/contactsus.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
