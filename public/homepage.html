@@ -8,6 +8,21 @@
   <script defer src="scripts/homepage.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
+
+<style>
+    .cropped-image {
+        height: 300px; /* Adjust height to make the carousel thinner */
+        object-fit: cover;
+        object-position: center 50%; /* Focuses on the middle third of the image */
+    }
+
+    @media (max-width: 768px) {
+        .cropped-image {
+            height: 150px; /* Adjust for smaller screens */
+        }
+    }
+</style>
+
 <body>
 
 <!-- Navbar -->
@@ -17,16 +32,19 @@
 <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="https://cdn.discordapp.com/attachments/1345492028817018890/1346709667249913907/image1.jpg?ex=67c92c9d&is=67c7db1d&hm=9bb5de67396ff542a18730b3a34bc18580c63aa73c3b9439795213461468709a&" class="d-block w-100" alt="Traffic Data">
+      <img src="https://res.cloudinary.com/dhfxyw4mt/image/upload/v1741196818/image1_awokwl.jpg" class="d-block w-100 cropped-image" alt="Traffic Data">
     </div>
     <div class="carousel-item">
-      <img src="https://cdn.discordapp.com/attachments/1345492028817018890/1346709668633907262/image2.jpg?ex=67c92c9d&is=67c7db1d&hm=c0359afcf2f7e3ca090232f8444655d10ccd4e72e556b768a6635b1da50bcda9&" class="d-block w-100" alt="Traffic Data">
+      <img src="https://res.cloudinary.com/dhfxyw4mt/image/upload/v1741196823/image4_l1hkxe.jpg" class="d-block w-100 cropped-image" alt="Traffic Data">
     </div>
     <div class="carousel-item">
-      <img src="https://cdn.discordapp.com/attachments/1345492028817018890/1346709670018158612/image3.jpg?ex=67c92c9d&is=67c7db1d&hm=1cfe59d4b0fab8150b56cd55692def6ace3b7785441c95e9eeeb8ea0589952ec&" class="d-block w-100" alt="Traffic Data">
+      <img src="https://res.cloudinary.com/dhfxyw4mt/image/upload/v1741196821/image5_dureoq.jpg" class="d-block w-100 cropped-image" alt="Traffic Data">
     </div>
     <div class="carousel-item">
-      <img src="https://cdn.discordapp.com/attachments/1345492028817018890/1346709671028719708/image5.jpg?ex=67c92c9e&is=67c7db1e&hm=0a0488b6994a181b4d47a21cddf4c1b7d51b411fc92ca81e169a0bd645d1aa02&" class="d-block w-100" alt="Traffic Data">
+      <img src="https://res.cloudinary.com/dhfxyw4mt/image/upload/v1741196818/image2_mq1lt3.jpg" class="d-block w-100 cropped-image" alt="Traffic Data">
+    </div>
+    <div class="carousel-item">
+      <img src="https://res.cloudinary.com/dhfxyw4mt/image/upload/v1741196817/image3_nrzduv.jpg" class="d-block w-100 cropped-image" alt="Traffic Data">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -54,6 +72,62 @@
     <div class="col-md-4">
       <h3>Enhanced Safety Monitoring</h3>
       <p>Advanced detection and monitoring capabilities ensure safer roads for drivers, pedestrians, and cyclists alike.</p>
+    </div>
+  </div>
+  <div class="row py-4">
+    <div style="margin-top:10px">
+      <p><b>TraffiTrack</b> is an advanced <b>AI-driven</b> application designed to intelligently <b>analyze</b> and <b>interpret</b> traffic data in <b>real-time</b>. By leveraging cutting-edge <b>machine learning algorithms</b>, it offers <b>predictive insights</b>, optimizing <b>traffic flow</b> and reducing <b>congestion</b>. With a user-friendly interface, TraffiTrack integrates seamlessly with <b>existing systems</b> to provide valuable feedback, enabling smarter <b>traffic management</b> and better <b>decision-making</b> for urban planners and commuters alike. Whether it's monitoring patterns or suggesting <b>optimal routes</b>, this app is poised to redefine how we interact with city traffic.</p>
+    </div>
+  </div>
+  <h2 class="text-center mb-4">AI-Driven Traffic Monitoring Features</h2>
+
+  <div class="row">
+    <!-- AI-Powered Traffic Analytics -->
+    <div class="col-md-4">
+      <div class="card shadow-sm h-100">
+        <div class="card-body">
+          <h4 class="card-title">📊 AI-Powered Traffic Analytics</h4>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Real-time data collection and analysis for accurate traffic insights</li>
+            <li class="list-group-item">Advanced AI models detect congestion patterns and predict future traffic conditions</li>
+            <li class="list-group-item">Heatmaps and visual reports for easy data interpretation</li>
+            <li class="list-group-item">Integration with existing traffic management systems for seamless monitoring</li>
+            <li class="list-group-item">Customizable dashboards with historical and live traffic data</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Smart Traffic Optimization -->
+    <div class="col-md-4">
+      <div class="card shadow-sm h-100">
+        <div class="card-body">
+          <h4 class="card-title">🚥 Smart Traffic Optimization</h4>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">AI-driven signal timing adjustments to reduce congestion and improve flow</li>
+            <li class="list-group-item">Dynamic traffic rerouting based on live road conditions</li>
+            <li class="list-group-item">Predictive analytics to prevent bottlenecks before they occur</li>
+            <li class="list-group-item">Integration with smart city infrastructure for enhanced urban mobility</li>
+            <li class="list-group-item">Optimization algorithms that adapt to weather, accidents, and special events</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Automated Traffic Violation Detection -->
+    <div class="col-md-4">
+      <div class="card shadow-sm h-100">
+        <div class="card-body">
+          <h4 class="card-title">🚔 Automated Traffic Violation Detection</h4>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">AI-powered cameras detect speeding, red-light violations, and illegal lane changes</li>
+            <li class="list-group-item">Real-time alerts sent to law enforcement for immediate action</li>
+            <li class="list-group-item">Automated license plate recognition (ALPR) for efficient ticketing and enforcement</li>
+            <li class="list-group-item">Secure cloud-based storage for evidence and reporting</li>
+            <li class="list-group-item">Data-driven insights to improve road safety and compliance</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </section>
