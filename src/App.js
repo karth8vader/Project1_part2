@@ -21,6 +21,16 @@ const AboutPage = () => {
         />
     );
 };
+
+const ContactUs = () => {
+    return (
+        <iframe
+            src="/contactus.html"
+            title="Contact Us"
+            style={{ width: "100%", height: "100vh", border: "none" }}
+        />
+    );
+};
   
 
 function App() {
@@ -30,6 +40,7 @@ function App() {
                 <Route path="/" element={<HomePageRedirect/>} />
                 <Route path="/login" element={<LoginPage />} />
                 <Route path="/about" element={<AboutPage />} />
+                <Route path="/contact" element={<ContactUs />} />
             </Routes>
         </Router>
     );
